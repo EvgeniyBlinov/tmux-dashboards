@@ -6,7 +6,7 @@ tmux dashboards
 ## Install
 
 ```sh
-git clone https://github.com/EvgeniyBlinov/tmux-dashboards.git ~/
+git clone https://github.com/EvgeniyBlinov/tmux-dashboards.git ~/tmux-dashboards
 ```
 
 ## Usage
