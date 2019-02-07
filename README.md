@@ -1,3 +1,5 @@
+[![MIT License][license-image]][license-url]
+
 tmux dashboards
 ===
 
@@ -21,3 +23,10 @@ bash ~/tmux-dashboards/vps/system/dashboard_vps_system.sh test
 ```sh
 bash ~/tmux-dashboards/vps/system/dashboard_vps_system.sh kill
 ```
+
+## Author
+
+- [Blinov Evgeniy](mailto:evgeniy_blinov@mail.ru) (<https://evgeniyblinov.ru>)
+
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
