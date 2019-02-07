@@ -42,9 +42,7 @@ function _run {
 				tmux send-keys "$WINDOW_L2_C1_CMD" C-m
 
 				tmux select-pane -t 3
-					tmux split-window -h
-						tmux select-pane -t 3
-						tmux send-keys "$WINDOW_L2_C2_CMD" C-m
+				tmux send-keys "$WINDOW_L2_C2_CMD" C-m
 }
 ########################################################################
 case "$1" in
