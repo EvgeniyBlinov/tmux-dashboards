@@ -9,6 +9,7 @@ REQUIRE_BIN_UTILS="tmux htop watch grep sort awk"
 WINDOW_L1_CMD=${WINDOW_L1_CMD:-"htop"}
 WINDOW_L2_C1_CMD="watch -n 20 'df -h|cut -c -60'"
 WINDOW_L2_C2_CMD="watch -n 10 $DASHBOARD_PATH/assets/ssh_auth_ip.sh"
+WINDOW_L2_C3_CMD="watch -n 10 $DASHBOARD_PATH/assets/docker_ps_short.sh"
 ########################################################################
 
 function _error {
@@ -43,6 +44,10 @@ function _run {
 
 				tmux select-pane -t 3
 				tmux send-keys "$WINDOW_L2_C2_CMD" C-m
+					tmux split-window -h
+						tmux select-pane -t 4
+						tmux resize-pane -L 40
+						tmux send-keys "$WINDOW_L2_C3_CMD" C-m
 }
 ########################################################################
 case "$1" in
