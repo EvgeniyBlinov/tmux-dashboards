@@ -37,12 +37,12 @@ function _kill {
 
 ########################################################################
 function _run {
-	if tmux has-session -t "=${TMUX_SESSION_NAME}" 2> /dev/null; then
-		att
-		exit 0
-	fi
+	#if tmux has-session -t "=${TMUX_SESSION_NAME}" 2> /dev/null; then
+		#att
+		#exit 0
+	#fi
 
-	tmux -2 new-session -d -s $TMUX_SESSION_NAME
+	#tmux -2 new-session -d -s $TMUX_SESSION_NAME
 
 	tmux split-window -v
 		tmux select-pane -t 1
@@ -62,7 +62,7 @@ function _run {
 						tmux resize-pane -L 40
 						tmux send-keys "$WINDOW_L2_C3_CMD" C-m
 
-	att
+	#att
 }
 ########################################################################
 case "${1:-run}" in
